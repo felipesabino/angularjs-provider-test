@@ -20,3 +20,8 @@ Travis build will execute `npm run travis`, so environment variables can be used
 - JavaScript Testing with Grunt, Mocha and Chai - https://gist.github.com/maicki/7781943
 - Advanced Testing and Debugging in AngularJS - http://www.yearofmoo.com/2013/09/advanced-testing-and-debugging-in-angularjs.html
 - Full-Spectrum Testing with AngularJS and Karma - http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html
+
+## Pending
+
+- Use `bower` instead of npm for `angular`, `angular-mocks` and any other client side library used in the future
+- How to publish/build so that it can be used in pure `js` by other projects?

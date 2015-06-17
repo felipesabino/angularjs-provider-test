@@ -38,8 +38,6 @@ angular.module('app.providers', ['ng'])
 
           $http.get(options.path).success (data) ->
 
-            debugger
-
             deferred.resolve(data)
 
           return deferred.promise
