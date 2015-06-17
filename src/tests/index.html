@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="../../node_modules/mocha/mocha.css" />
+</head>
+<body>
+  <div id="mocha"></div>
+
+  <!-- Component Vendor -->
+  <script src="../../node_modules/angular/angular.min.js"></script>
+
+  <!-- Test Suit Vendor -->
+  <script src="../../node_modules/mocha/mocha.js"></script>
+  <script src="../../node_modules/chai/chai.js"></script>
+  <script src="../../node_modules/sinon/lib/sinon.js"></script>
+  <script src="../../node_modules/sinon-chai/lib/sinon-chai.js"></script>
+
+
+  <!-- Test Setup -->
+  <script>
+    mocha.setup('bdd')
+    mocha.reporter('html');
+    var assert = chai.assert;
+    var expect = chai.expect;
+  </script>
+
+  <!-- Test Suit Vendor [2] (needs to be added after everything is already set up)-->
+  <script src="../../node_modules/angular-mocks/angular-mocks.js"></script>
+
+  <!-- Component Files -->
+  <script src="../../dist/lib/index.js"></script>
+
+  <!-- Tests -->
+  <script src="../../dist/tests/unit/example-unit-tests.js"></script>
+  <script src="../../dist/tests/midway/module-midway-tests.js"></script>
+
+  <script>
+    // Only tests run in real browser, injected script run if options.run == true
+    if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+      mocha.run();
+    }
+  </script>
+</body>
+</html>
